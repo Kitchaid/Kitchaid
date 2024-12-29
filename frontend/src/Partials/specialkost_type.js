@@ -1,0 +1,27 @@
+const special_type1 = [
+  'Gluten',
+  'Mjölk-protein',
+  'Ägg',
+  'Soja',
+  'Fisk-Skaldjur',
+  'Baljväxter',
+  'Blod',
+  'Stenfrukt',
+  'Citrus',
+  'Äppel',
+  'Selleri',
+  'Senap',
+  'Sesamfrön',
+  'Spannmål',
+  'Lök',
+  'Nötter',
+  'Rött',
+  'Fågel',
+  'Önskekost',
+  'Önskekost-egen-list',
+  'Flytande',
+  'Timbal',
+  'Grovpaté',
+]
+const special_type = special_type1.sort()
+export default special_type;
