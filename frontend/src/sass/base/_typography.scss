@@ -1,0 +1,94 @@
+@use '../abstracts/variables' as v;
+/* 
+- Typography
+*/
+
+/* Google font import */
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,300;0,400;1,300;1,400&family=Roboto:ital,wght@0,300;0,500;0,700;0,900;1,300&display=swap');
+body {
+  font-family: 'Exo 2', sans-serif;
+  font-size: 16px;
+  color: v.$grey;
+  font-weight: 300;
+}
+
+h1 {
+  font-size: 3.5rem;
+  line-height: 1.4;
+}
+
+h2 {
+  font-size: 2.75rem;
+  line-height: 1.25;
+}
+
+h3 {
+  font-size: 2.25rem;
+}
+
+h4 {
+  font-size: 1.65rem;
+}
+
+p {
+  font-size: 1.20rem;
+  margin-bottom: 1.25rem;
+}
+.font-size-xxxs{
+  font-size: 8px;
+}
+.font-size-xxs{
+  font-size: 10px;
+}
+.font-size-xs{
+  font-size: 12px;
+}
+.font-size-s{
+  font-size: 14px;
+}
+.font-size-lg{
+  font-size: 30px;
+}
+.font-size-md{
+  font-size: 16px;
+}
+.font-weight-md{
+  font-weight: 400;
+}
+.small {
+  font-size: 12px;
+  cursor:pointer;
+  color: v.$white;
+}
+.message-container{
+  display: flex;
+  justify-content: flex-end;
+}
+.message-text-SendByUser{
+  font-size: 16px;
+  color: v.$white;
+  background-color: v.$techblue;
+  border-radius: 10px;
+  width: fit-content;
+  padding: 0 15px;
+}
+.message-text-SendByContact{
+  font-size: 16px;
+  color: v.$black;
+  background-color: v.$white;
+  border-radius: 10px;
+  width: fit-content;
+  padding: 0 15px;
+}
+.ingredient-title{
+  background-color:v.$techblue;
+  display: block;
+  line-height: 40px;
+  border-radius: 10px;
+}
+.ingredient-body{
+  background-color:v.$white-transp;
+  display: block;
+  border-radius: 10px;
+  height: max-content;
+}

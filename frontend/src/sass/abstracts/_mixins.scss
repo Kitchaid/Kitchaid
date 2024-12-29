@@ -1,0 +1,34 @@
+@use '../abstracts/variables' as v;
+@mixin button($value) {
+  background-color: $value;
+  color: v.$white !important;
+  border: 0;
+  text-decoration: none;
+  color: v.$bule-grey;
+  font-weight: 500;
+  font-size: .975rem;
+  padding: 1rem 1.25rem;
+  border-radius: 4px;
+  transition: all ease-in .2s;
+
+  &:hover {
+    opacity: .7;
+  }
+};
+
+@mixin gradient($direction, $list) {
+  background: -webkit-linear-gradient($direction, $list);
+}
+
+@mixin appBorder {
+  max-width: 400px;
+  min-width: 300px;
+  border-top: 10px double v.$orange;
+  border-bottom: 10px double v.$orange;
+  border-radius: 49px 0px / 44px 86px;
+  box-shadow: 0px 0px 25px v.$techblue-middle-trans;
+}
+
+@mixin table_gradient {
+  background: linear-gradient(30deg, v.$techblue 20%, v.$techblue-middle 100%, v.$techblue 20%);
+}

@@ -1,0 +1,31 @@
+/* Table content 
+------------------------------------
+
+-- base imports
+-- components imports
+-- layout imports
+-- abstrats imports
+
+**/
+
+//base imports
+@use "./base/reset";
+@use "./base/typography";
+//components imports
+@use "./components/button";
+@use "./components/navbar";
+@use "./components/hero";
+@use "./components/printer";
+@use "./components/spinner";
+@use "./components/card";
+@use "./components/sidebar";
+@use "./components/form";
+@use "./components/footer";
+@use "./components/visualize";
+@use "./components//demo.scss";
+@use "./components//dashboard.scss";
+
+//abstrats imports
+@use "./abstracts/variables" as *;
+
+

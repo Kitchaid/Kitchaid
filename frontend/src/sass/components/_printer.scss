@@ -1,0 +1,55 @@
+@use "../abstracts/variables" as v;
+/* printer */
+.printForm {
+    color: white;
+    font-style: italic;
+    font-size: 15px;
+    display: block;
+    position: relative;
+    left: 80px;
+    cursor: pointer;
+  }
+  .printer-icon {
+    margin-right: 10rem;
+  }
+  
+  @media print and (color) {
+    ::-webkit-input-placeholder {
+      opacity: 0.5 !important;
+    }
+    :-moz-placeholder {
+      opacity: 0.5 !important;
+    }
+    ::-moz-placeholder {
+      opacity: 0.5 !important;
+    }
+    :-ms-input-placeholder {
+      opacity: 0.5 !important;
+    }
+  }
+  
+  @media print {
+    body {
+      background-color: white !important;
+    }
+    .tips {
+      display: none;
+    }
+    .glow {
+      display: none;
+    }
+    .odd-row{
+      background-color: #ffffff00;
+    }
+    .even-row{
+      background-color: #f6f6f6;
+    }
+  }
+
+  .print-page {
+    page-break-after: always;
+  }
+
+  .print-table {
+    page-break-inside: avoid;
+  }

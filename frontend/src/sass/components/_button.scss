@@ -1,0 +1,184 @@
+@use '../abstracts/mixins' as *;
+@use '../abstracts/variables' as v;
+
+/* ======== button style ======== */
+
+.mainButton {
+  padding: 0.5em 2em;
+  border: transparent;
+  box-shadow: 2px 2px 4px v.$black-transp;
+  background: v.$techblue-middle;
+  color: v.$black;
+  border-radius: 4px;
+  width: 170px;
+  text-decoration: none;
+  cursor: pointer;
+  position: relative;
+  padding: 0.5rem 2.5rem;
+  margin: 20px auto;
+  line-height: 2rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  border-radius: 18px;
+  // color:v.$white;
+  // border: 1px solid v.$techgreen-light;
+  // background-image: linear-gradient(-180deg, v.$techgreen-light 0%, v.$techgreen 100%);
+  // box-shadow: 0 1rem 1.25rem 0 v.$techblue-transp
+  //   0 -0.25rem 1.5rem v.$techgreen inset,
+  //   0 0.75rem 0.5rem v.$white-transp inset,
+  //   0 0.25rem 0.5rem 0 v.$techgreen inset;
+}
+
+.mainButton span {
+  margin: auto;
+  color: v.$white;
+  background-image: linear-gradient(0deg, v.$light-brown 0%, v.$white 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+.mainButton::before{
+  // content: "";
+  // display: block;
+  // height: 0.25rem;
+  // position: absolute;
+  // top: 0.3rem;
+  // left: 50%;
+  // transform: translateX(-50%);
+  // width: calc(100% - 6.5rem);
+  // background: v.$white;
+  // border-radius: 100%;
+  // opacity: 0.7;
+}
+
+.mainButton:hover {
+  transform: translateY(-3px);
+  transform: scale(1.05);
+  color:white;
+  background: v.$dark-blue;
+  @include table_gradient;
+}
+
+.orange {
+  background-color: v.$yellow;
+  color: v.$white;
+}
+
+.grey {
+  background-color: v.$grey;
+  color: v.$white;
+}
+
+.result {
+  color: v.$white;
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 0.8em;
+  margin-top: -1.5em;
+  font-size: 2.5em;
+}
+.error {
+  color: v.$orange;
+  font-size: 12px;
+  margin-top: -25px;
+}
+
+.datePicker {
+  display: flex;
+  justify-content: space-around;
+  max-width:320px;
+  margin: auto;
+  border-radius: 10px;
+  color: v.$white;
+}
+
+.badge{
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 7px;
+  padding: 3px;
+  font-weight: 900;
+  position: relative;
+  bottom:8px;
+}
+.messageUserList{
+  display: flex;
+  align-items: baseline;
+}
+.badge-message{
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 10px;
+  padding: 3px;
+  font-weight: 900;
+  position: relative;
+  bottom:15px;
+  left:-120px
+}
+.badge-message-readed{
+  display: none;
+}
+.glow {
+  color: v.$techblue;
+  cursor: pointer;
+}
+.glow_red {
+  color: v.$white;
+  cursor: pointer;
+}
+.glow_red:hover {
+  color: v.$orange;
+  cursor: pointer;
+}
+.button_size{
+  transform: scale(0.8);
+}
+.special-type-group{
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+  color:white
+}
+.stats_card {
+  font-size: 17px;
+  padding: 0.5em 2em;
+  border: transparent;
+  box-shadow: 2px 2px 4px v.$black-transp;
+  background: v.$techblue-middle;
+  color: v.$white;
+  border-radius: 4px;
+}
+.stats_card_light {
+  font-size: 17px;
+  padding: 0.5em 2em;
+  border: transparent;
+  box-shadow: 2px 2px 4px v.$black-transp;
+  color: v.$techblue;
+  border-radius: 4px;
+}
+.special_type {
+  padding: 0.2em 0.5em;
+  border: transparent;
+  box-shadow: 2px 2px 4px v.$black-transp;
+  background: v.$techblue;
+  color: v.$white;
+  border-radius: 4px;
+}
+.special_type_light {
+  padding: 0.2em 0.5em;
+  border: transparent;
+  box-shadow: 2px 2px 4px v.$black-transp;
+  color: v.$techblue;
+  background-color: v.$white;
+  border-radius: 4px;
+}
+
+.stats_card:hover {
+  background: v.$dark-blue;
+  @include table_gradient;
+}
+.cursor{
+  cursor: pointer;
+}
+.stats_card_light:hover {
+  background: v.$dark-blue;
+}
+

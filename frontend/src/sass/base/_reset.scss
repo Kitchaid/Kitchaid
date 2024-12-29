@@ -1,0 +1,80 @@
+@use "../abstracts/mixins" as *;
+@use "../abstracts/variables" as v;
+/* 
+- Reset styles
+*/
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  font: inherit;
+	vertical-align: baseline;
+}
+body {
+  height: fit-content;
+  text-rendering: optimizeSpeed;
+  background-color: v.$techblue !important;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body::-webkit-scrollbar {
+  display: none;
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
+}
+
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+input:not(.radio), select,textarea{
+  border: transparent;
+  box-shadow: 3px 3px 8px rgba(0,0,0,0.6);
+}
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+
+img {
+  image-rendering: -webkit-optimize-contrast;
+}
+

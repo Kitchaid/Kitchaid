@@ -1,0 +1,259 @@
+@use '../abstracts/variables' as v;
+.backgroundImg {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.backgroundImg img {
+  max-width: 50%; /* Reduce image size */
+  max-height: 50%; /* Ensure it doesn’t get too large */
+  opacity: 0.3; /* Lower the opacity */
+  object-fit: contain; /* Preserve aspect ratio */
+}
+
+.welcomeText {
+  position: absolute;
+  text-align: center;
+  color: rgb(67, 124, 159); /* Dark text for contrast */
+  font-size: 2rem;
+  font-weight: bold;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2); /* Add some subtle shadow */
+}
+  .searchWindow {
+    width: 300px;
+    margin: auto;
+  }
+  .searchResult::-webkit-scrollbar {
+    display: none;
+  }
+  .searchResult {
+    margin-top: 50;
+    height: 75vh;
+    padding: 0px;
+    margin-right: 30px;
+    overflow-y: scroll;
+  }
+  .searchResult-admin {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 650px;
+    padding: 0px;
+    margin-right: 30px;
+    overflow-y: scroll;
+  }
+  
+/* Remove Accordion Background and Borders */
+.accordion-item {
+  border: none !important;
+  background-color: transparent !important;
+}
+
+.accordion-header {
+  background-color: transparent !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+}
+
+.accordion-body {
+  background-color: transparent !important;
+  border-top: none !important;
+  padding: 0 !important;
+}
+
+/* Remove Focus Outline */
+.accordion-header:focus {
+  box-shadow: none !important;
+}
+  
+  .routine_text {
+    text-align: justify;
+    text-justify: inter-word;
+  }
+  .chart{
+    width: 350px;
+    border-radius: 20px;
+    margin: auto;
+    margin-bottom: 20px;
+    background-color: v.$grey-transp;
+    height:450px;
+    overflow-y: scroll;
+    font-size: 10px;
+  }
+  .chart::-webkit-scrollbar {
+    display: none;
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+  }
+  .control-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 1000px; 
+    padding: 0 12px;
+    background-color: v.$grey-transp;
+}
+.admin-setting {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px;
+    height: 100px;
+}
+
+.renderWindow {
+    border-bottom: 2px solid v.$white-transp;
+}
+.render-bg{
+    width: 5vw;
+    margin: auto;
+    margin-top: 25rem;
+    opacity: 0.35;
+    color: v.$white;
+}
+
+.kitchenWindow{
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    justify-content: space-around;
+    height: max-content;
+}
+.startRating{
+  font-size: 10px !important;
+}
+.pieChartColor1{
+  height: 10px;
+  width: 10px;
+  background-color: #0088FE;
+  border: 1px solid white;
+}
+.pieChartColor2{
+  height: 10px;
+  width: 10px;
+  background-color: #00C49F;
+  border: 1px solid white;
+}
+.pieChartColor3{
+  height: 10px;
+  width: 10px;
+  background-color: #8228ff;
+  border: 1px solid white;
+}
+.pieChartColor4{
+  height: 10px;
+  width: 10px;
+  background-color: #FE8052;
+  border: 1px solid white;
+}
+.image {
+  width : 400px;
+  margin: auto;
+}
+.image_thumbnail {
+  width : 80px;
+  margin: auto;
+}
+.image_ingredient {
+  width : 300px;
+  margin: auto;
+  box-shadow: 8px 8px 5px v.$techblue-transp;
+}
+
+///////////////////////////////////////////////////
+/// 
+/* styles.css */
+
+.kiosk {
+  display: flex;
+  flex-direction: column;
+  border: 2px dashed #000;
+  padding: 8px;
+  margin-bottom: 8px;
+}
+
+.kiosk.dragging-over {
+  background-color: #f0f8ff; /* LightBlue */
+}
+
+.item {
+  user-select: none;
+  padding: 8px;
+  margin-bottom: 4px;
+  border-radius: 4px;
+}
+
+.item.dragging {
+  border-color: #4099ff; /* Blue */
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  border: 2px solid #ddd;
+  padding: 8px;
+  border-radius: 4px;
+  margin-bottom: 8px;
+}
+
+.list.dragging-over {
+  border-color: #000;
+}
+
+.notice {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px;
+  margin-bottom: 8px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  line-height: 1.5;
+  color: #aaa;
+}
+
+.content {
+  margin-top: 16px;
+}
+
+button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 8px;
+  padding: 8px;
+  color: #000;
+  border: 1px solid #ddd;
+  background: #fff;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.Vcollapse {
+  visibility:collapse
+}
+/* Add your other styles here as needed */
+
+.scal-down{
+ transform: scale(0.75);
+}
+
+.GDS-icon{
+  color: red;
+  z-index: 1;
+  position: absolute;
+  margin-left:-20px;
+}
+.GDS-text{
+  color: red;
+  z-index: 1;
+  font-family: 'Exo 2';
+  background-color: white;
+}
